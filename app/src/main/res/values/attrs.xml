@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This is declaring the XML attributes that can be set within a theme. -->
+    <!-- Check the "res/values/themes.xml" file for examples of these attributes being set.  -->
+    <attr name="pageBackground" format="reference" />
+    <attr name="textSubheader" format="reference" />
+    <attr name="textLarge" format="reference" />
+    <attr name="textRegular" format="reference" />
+    <attr name="textSubheaderWhite" format="reference" />
+    <attr name="textLargeWhite" format="reference" />
+    <attr name="textRegularWhite" format="reference" />
+    <attr name="textSubheaderPrimary" format="reference" />
+    <attr name="textLargePrimary" format="reference" />
+    <attr name="textRegularPrimary" format="reference" />
+    <attr name="textSubheaderAccent" format="reference" />
+    <attr name="textLargeAccent" format="reference" />
+    <attr name="textRegularAccent" format="reference" />
+
+    <attr name="whiteBackground" format="reference" />
+    <attr name="button" format="reference" />
+
+</resources>

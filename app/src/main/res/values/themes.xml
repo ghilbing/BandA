@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Check the "res/values/attrs.xml" file for where these style names are first defined.  -->
+    <style name="Theme.Material_Light" parent="AppTheme">
+        <item name="pageBackground">@style/page_background_wh</item>
+        <item name="textSubheader">@style/text_subheader_wh</item>
+        <item name="textLarge">@style/text_large_wh</item>
+        <item name="textRegular">@style/text_regular_wh</item>
+        <item name="textSubheaderWhite">@style/text_subheader_white_wh</item>
+        <item name="textLargeWhite">@style/text_large_white_wh</item>
+        <item name="textRegularWhite">@style/text_regular_white_wh</item>
+        <item name="textSubheaderPrimary">@style/text_subheader_primary_wh</item>
+        <item name="textLargePrimary">@style/text_large_primary_wh</item>
+        <item name="textRegularPrimary">@style/text_regular_primary_wh</item>
+        <item name="textSubheaderAccent">@style/text_subheader_accent_wh</item>
+        <item name="textLargeAccent">@style/text_large_accent_wh</item>
+        <item name="textRegularAccent">@style/text_regular_accent_wh</item>
+        <item name="whiteBackground">@style/white_background_wh</item>
+        <item name="button">@style/button_wh</item>
+        <item name="actionBarStyle">@style/action_bar_wh</item>
+    </style>
+
+
+
+</resources>
