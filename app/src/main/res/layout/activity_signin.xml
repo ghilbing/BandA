@@ -9,10 +9,12 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/email_login_ET"
+        android:id="@+id/email_signin_ET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="99dp"
         android:ems="10"
         android:hint="@string/enter_email_address"
         android:inputType="textEmailAddress"
@@ -21,46 +23,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_login_ET"
+        android:id="@+id/password_signin_ET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="99dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_login_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/email_signin_ET" />
 
     <Button
-        android:id="@+id/signin_login_BT"
+        android:id="@+id/signup_signin_BT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        app:layout_constraintBottom_toTopOf="@+id/not_registered_loginin_TV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_login_ET"
-        app:layout_constraintVertical_bias="0.521" />
-
-    <TextView
-        android:id="@+id/not_registered_loginin_TV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="168dp"
-        android:text="@string/not_registered"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="324dp"
+        android:text="@string/sign_up_now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_signin_ET" />
 
     <TextView
-        android:id="@+id/forgot_login_TV"
+        android:id="@+id/have_account_signin_TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/forgot"
-        app:layout_constraintEnd_toEndOf="@+id/password_login_ET"
-        app:layout_constraintTop_toBottomOf="@+id/password_login_ET" />
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="222dp"
+        android:text="@string/do_not_have_an_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_signin_BT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

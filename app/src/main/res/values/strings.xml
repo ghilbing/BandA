@@ -19,6 +19,18 @@
     <string name="login_failed">"Login failed"</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="reenter_password">Re enter password</string>
+    <string name="fields_are_empty">Fields are empty</string>
+    <string name="sign_up_unsuccessful">Sign Up Unsuccessful</string>
+    <string name="error_ocurred">Error ocurred</string>
+    <string name="error_occurred">Error Occurred</string>
+    <string name="not_registered">Not registered? Sign up here.</string>
+    <string name="you_are_logged_in">You are logged in!</string>
+    <string name="please_login">Please login</string>
+    <string name="logout">Logout</string>
+    <string name="send_my_password">Send my password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="password_sent_to_your_email">Password sent to your email</string>
 
 
 </resources>

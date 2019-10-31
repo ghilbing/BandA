@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hilbing.banda.ui.SignInActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/spacer_top"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/music_header"
+        android:orientation="vertical"/>
+
+    <RelativeLayout
+        android:id="@+id/spacer_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spacer_top"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOr"
+        style="?textLargePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRegister"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:text="OR"
+        android:textAlignment="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        style="?button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/container"
+        android:layout_alignLeft="@+id/container"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/container"
+        android:layout_alignStart="@+id/container"
+        android:layout_marginBottom="30dp"
+        android:onClick="openRegistration"
+        android:text="@string/register" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="30dp"
+        android:background="@color/cardview_light_background"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSignupTitle">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEmail"
+                    style="?textRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvSignupTitle"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_email_address"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/container_email"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etPassword"
+                    style="?textRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/appCompatButton"
+                style="?button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:onClick="login"
+                android:text="@string/login" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ibLoginWithFacebook"
+                    android:layout_width="@android:dimen/notification_large_icon_height"
+                    android:layout_height="@android:dimen/notification_large_icon_width"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/facebook" />
+
+                <ImageButton
+                    android:id="@+id/ibLoginWithGoogle"
+                    android:layout_width="@android:dimen/notification_large_icon_height"
+                    android:layout_height="@android:dimen/notification_large_icon_width"
+                    android:onClick="loginWithGoogle"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/google"
+                    android:contentDescription="TODO" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
