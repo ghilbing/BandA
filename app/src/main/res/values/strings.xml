@@ -31,6 +31,10 @@
     <string name="send_my_password">Send my password</string>
     <string name="forgot_password">Forgot password</string>
     <string name="password_sent_to_your_email">Password sent to your email</string>
+    <string name="facebook_app_id">470809057116879</string>
+    <string name="fb_login_protocol_scheme">fb470809057116879</string>
+    <string name="user_cancelled_it">User cancelled it</string>
+    <string name="could_not_register_to_firebase">Could not register to Firebase</string>
 
 
 </resources>
