@@ -35,6 +35,17 @@
     <string name="fb_login_protocol_scheme">fb470809057116879</string>
     <string name="user_cancelled_it">User cancelled it</string>
     <string name="could_not_register_to_firebase">Could not register to Firebase</string>
+    <string name="user_and_band">User and Band</string>
+    <string name="playlist">Playlists</string>
+    <string name="rehearsals">Rehearsals</string>
+    <string name="concerts">Concerts</string>
+    <string name="settings">Settings</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="bandA">BandA</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 
 
 </resources>
