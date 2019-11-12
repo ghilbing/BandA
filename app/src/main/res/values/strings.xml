@@ -46,6 +46,10 @@
     <string name="bandA">BandA</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="please_enter_a_valid_email">Please enter a valid email</string>
+    <string name="minimum_length_of_password_should_be_6">Minimum length of password should be 6</string>
+    <string name="you_are_already_registered">You are already registered</string>
+    <string name="already_registered">Already registered?</string>
 
 
 </resources>

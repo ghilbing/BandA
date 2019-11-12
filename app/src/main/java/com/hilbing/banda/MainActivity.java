@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.hilbing.banda.fragment.ConcertFragment;
 import com.hilbing.banda.fragment.PlaylistFragment;
 import com.hilbing.banda.fragment.RehearsalFragment;
@@ -91,6 +92,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_send:
                 Toast.makeText(this, getResources().getString(R.string.send), Toast.LENGTH_LONG).show();
+                break;
+            case R.id.nav_logout:
+                FirebaseAuth.getInstance().signOut();
+                finish();
                 break;
 
         }

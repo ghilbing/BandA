@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.hilbing.banda.ForgotActivity;
 import com.hilbing.banda.MainActivity;
@@ -92,9 +93,17 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_failed), Toast.LENGTH_LONG).show();
                             }
                             else {
+                                if (task.getException() instanceof FirebaseAuthUserCollisionException){
+                                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.you_are_already_registered), Toast.LENGTH_LONG).show();
+                                } else {
+                                   // Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            }
+                          /*  else {
                                 Intent intToHome = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intToHome);
-                            }
+                            }*/
                         }
                     });
                 }
