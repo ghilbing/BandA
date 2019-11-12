@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -26,9 +27,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FacebookAuthCredential;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.hilbing.banda.MainActivity;
@@ -40,7 +41,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class SignInActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @BindView(R.id.email_signin_ET)
     EditText emailET;
@@ -84,7 +85,7 @@ public class SignInActivity extends AppCompatActivity {
 
         }
         else {
-            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
             startActivity(intent);
         }
 
@@ -115,29 +116,25 @@ public class SignInActivity extends AppCompatActivity {
                 }
 
                 else if (email.isEmpty() && passw.isEmpty()) {
-                    Toast.makeText(SignInActivity.this, getResources().getString(R.string.fields_are_empty), Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this, getResources().getString(R.string.fields_are_empty), Toast.LENGTH_LONG).show();
                 }
                 else if (!(email.isEmpty() && passw.isEmpty())) {
-                    mFirebaseAuth.createUserWithEmailAndPassword(email, passw).addOnCompleteListener(SignInActivity.this, new OnCompleteListener<AuthResult>() {
+                    mFirebaseAuth.createUserWithEmailAndPassword(email, passw).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(SignInActivity.this, getResources().getString(R.string.sign_up_unsuccessful), Toast.LENGTH_LONG).show();
+                                FirebaseAuthException e = (FirebaseAuthException)task.getException();
+                                Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
 
                             }
                             else {
-                                if (task.getException() instanceof FirebaseAuthUserCollisionException){
-                                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.you_are_already_registered), Toast.LENGTH_LONG).show();
-                                } else {
-                                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                }
-                                startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                                startActivity(new Intent(SignUpActivity.this, ProfileActivity.class));
                             }
                         }
                     });
                 }
                 else {
-                    Toast.makeText(SignInActivity.this, getResources().getString(R.string.error_occurred), Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this, getResources().getString(R.string.error_occurred), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -148,7 +145,7 @@ public class SignInActivity extends AppCompatActivity {
         haveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignInActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

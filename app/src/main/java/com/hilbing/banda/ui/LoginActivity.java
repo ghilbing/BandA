@@ -3,10 +3,8 @@ package com.hilbing.banda.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -93,17 +91,9 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, getResources().getString(R.string.login_failed), Toast.LENGTH_LONG).show();
                             }
                             else {
-                                if (task.getException() instanceof FirebaseAuthUserCollisionException){
-                                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.you_are_already_registered), Toast.LENGTH_LONG).show();
-                                } else {
-                                   // Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                }
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                            }
-                          /*  else {
                                 Intent intToHome = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intToHome);
-                            }*/
+                            }
                         }
                     });
                 }
@@ -117,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
         notRegisteredTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent = new Intent(LoginActivity.this, SignInActivity.class);
+               Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
                startActivity(intent);
 
             }

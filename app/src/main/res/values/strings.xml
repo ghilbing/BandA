@@ -49,7 +49,11 @@
     <string name="please_enter_a_valid_email">Please enter a valid email</string>
     <string name="minimum_length_of_password_should_be_6">Minimum length of password should be 6</string>
     <string name="you_are_already_registered">You are already registered</string>
-    <string name="already_registered">Already registered?</string>
+    <string name="already_registered">Already registered? Login</string>
+    <string name="tap_on_camera_to_choose_profile_picture">Tap on camera to choose profile picture</string>
+    <string name="enter_display_name">Enter display name</string>
+    <string name="save">Save</string>
+    <string name="select_profile_image">Select profile image</string>
 
 
 </resources>
